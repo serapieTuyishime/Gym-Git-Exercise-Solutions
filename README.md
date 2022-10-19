@@ -251,3 +251,31 @@ Dropped refs/stash@{0} (aab78323e4346404e68533e4c48053804a9859cc)
 PS C:\Users\TheGym\Desktop\Git exercises> git reset     
 PS C:\Users\TheGym\Desktop\Git exercises> git reset 
 ```
+## bundle 2
+### exercise one
+```bash
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .     
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m 
+"ft/bundle-2 created new services" 
+[ft/bundle-2 461f146] ft/bundle-2 created new services  
+ 2 files changed, 13 insertions(+)
+ create mode 100644 services.html
+ create mode 100644 teams.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/bundle-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 894 bytes | 894.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0    
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/bundle-2
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS C:\Users\TheGym\Desktop\Git exercises>          
+```
