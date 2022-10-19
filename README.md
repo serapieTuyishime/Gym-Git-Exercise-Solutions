@@ -128,3 +128,126 @@ Everything up-to-date
 branch 'main' set up to track 'origin/main'.
 PS C:\Users\TheGym\Desktop\Git exercises> 
 ```
+### exercise 2
+
+```bash
+
+PS C:\Users\TheGym\Desktop\Git exercises> git init      
+Reinitialized existing Git repository in C:/Users/TheGym/Desktop/Git exercises/.git/
+PS C:\Users\TheGym\Desktop\Git exercises> git stash clear
+PS C:\Users\TheGym\Desktop\Git exercises> echo "hdhhf" >"home.html" 
+
+PS C:\Users\TheGym\Desktop\Git exercises> git add home.html
+d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> echo "this is 
+d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+stash@{1}: WIP on dev: f533d24 main: manuputated files  
+PS C:\Users\TheGym\Desktop\Git exercises> echo "this is 
+the teams page" > "teams.html"
+PS C:\Users\TheGym\Desktop\Git exercises> git stash     
+Saved working directory and index state WIP on dev: f533d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+
+stash@{0}: WIP on dev: f533d24 main: manuputated files  
+stash@{1}: WIP on dev: f533d24 main: manuputated files  
+stash@{2}: WIP on dev: f533d24 main: manuputated files  
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout  
+stash@{1} about.html
+error: unknown switch `e'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>... 
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch  
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)    
+    -q, --quiet           suppress progress reporting   
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of 
+submodules
+    --progress            force progress reporting      
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge, diff3, 
+or zdiff3)
+    -d, --detach          detach HEAD at named commit   
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unm    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+
+stash@{0}: WIP on dev: f533d24 main: manuputated files  
+stash@{1}: WIP on dev: f533d24 main: manuputated files  
+stash@{2}: WIP on dev: f533d24 main: manuputated files  
+
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+
+stash@{0}: WIP on dev: f533d24 main: manuputated files  
+stash@{1}: WIP on dev: f533d24 main: manuputated files  
+stash@{2}: WIP on dev: f533d24 main: manuputated files  
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+ stash@{0}    
+error: unknown switch `e'
+usage: git stash pop [--index] [-q|--quiet] [<stash>]   
+
+    -q, --quiet           be quiet, only report errors  
+    --index               attempt to recreate the index 
+1
+On branch dev
+        new file:   about.html
+
+Dropped refs/stash@{1} (bb7d051a451edb7afc8ce1ede56c34ca15382f26)
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+
+stash@{0}: WIP on dev: f533d24 main: manuputated files  
+stash@{1}: WIP on dev: f533d24 main: manuputated files  
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)     
+        new file:   about.html
+Dropped refs/stash@{1} (0a2f674cebe3e4bdf3e1bfe42885bd4a7557b62f)
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m 
+"dev: did the stashing and unstashing"
+[dev 0a3c229] dev: did the stashing and unstashing      
+ 2 files changed, 0 insertions(+), 0 deletions(-)       
+ create mode 100644 about.html
+ create mode 100644 home.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 921 bytes | 307.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0    
+iting:
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.gi * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+PS C:\Users\TheGym\Desktop\Git exercises> git stash list
+
+stash@{0}: WIP on dev: f533d24 main: manuputated files  
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+o
+error: o is not a valid reference
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)     
+        new file:   teams.html
+
+Dropped refs/stash@{0} (aab78323e4346404e68533e4c48053804a9859cc)
+PS C:\Users\TheGym\Desktop\Git exercises> git reset     
+PS C:\Users\TheGym\Desktop\Git exercises> git reset 
+```
